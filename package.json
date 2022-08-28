@@ -17,6 +17,7 @@
   "scripts": {
     "build:libs": "turbo run build --filter=./packages/*",
     "build:apps": "turbo run build --filter=./apps/*",
+    "build:external": "turbo run build --filter=./external/*",
     "build": "turbo run build",
     "dev": "turbo run dev --filter=./packages/* --no-cache --parallel --continue",
     "lint": "turbo run lint",
@@ -25,7 +26,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build && changeset publish"
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.24.3",

@@ -53,5 +53,8 @@
     "extends": [
       "@matejlauko"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -96,5 +96,8 @@
     "extends": [
       "@matejlauko/eslint-config/react"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

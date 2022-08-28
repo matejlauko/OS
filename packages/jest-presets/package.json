@@ -20,5 +20,8 @@
   },
   "peerDependencies": {
     "jest": "28"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
