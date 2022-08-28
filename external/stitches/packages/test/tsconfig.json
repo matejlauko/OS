@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "diagnostics": true,
+    "outDir": "built-types",
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "extendedDiagnostics": true,
+    "noEmit": false,
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "declaration": true,
+    "lib": ["dom", "es2020"],
+    "moduleResolution": "node",
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "target": "es2020"
+  },
+  "exclude": ["built-types"]
+}

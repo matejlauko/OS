@@ -1,0 +1,57 @@
+{
+  "name": "@matejlauko/tokens",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matejlauko/OS.git",
+    "directory": "packages/tokens"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup --clean",
+    "dev": "tsup --watch",
+    "lint": "tsc && eslint src/**/*.ts* --fix && prettier --write src/**/*.ts*",
+    "test": "echo \"no tests yet\"",
+    "test:watch": "jest --watch",
+    "clean": "rm -rf dist "
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "dts": true,
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "external": [
+      "react"
+    ]
+  },
+  "dependencies": {
+    "@matejlauko/utils": "*",
+    "@radix-ui/colors": "^0.1.8"
+  },
+  "devDependencies": {
+    "@matejlauko/eslint-config": "*",
+    "@matejlauko/jest-presets": "*",
+    "@matejlauko/stitches-react": "*",
+    "@matejlauko/typings": "*"
+  },
+  "jest": {
+    "preset": "@matejlauko/jest-presets/node"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@matejlauko"
+    ]
+  }
+}

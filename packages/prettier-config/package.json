@@ -1,0 +1,17 @@
+{
+  "name": "@matejlauko/prettier-config",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matejlauko/OS.git",
+    "directory": "packages/prettier-config"
+  },
+  "main": "index.json",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "prettier": "2"
+  }
+}

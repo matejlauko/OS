@@ -1,0 +1,9 @@
+{
+  "extends": "@matejlauko/typings/react-library.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["@matejlauko/typings/helpers", "jest"]
+  },
+  "exclude": ["dist", "node_modules"],
+  "include": ["src", "types.d.ts"]
+}

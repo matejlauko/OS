@@ -1,0 +1,51 @@
+{
+  "name": "@matejlauko/os",
+  "private": true,
+  "author": "Matej Lauko <matej@lauko.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matejlauko/OS.git"
+  },
+  "packageManager": "pnpm@7.9.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "external/stitches",
+    "external/stitches/packages/*"
+  ],
+  "scripts": {
+    "build:libs": "turbo run build --filter=./packages/*",
+    "build:apps": "turbo run build --filter=./apps/*",
+    "build": "turbo run build",
+    "dev": "turbo run dev --filter=./packages/* --no-cache --parallel --continue",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.24.3",
+    "@matejlauko/eslint-config": "workspace:*",
+    "@matejlauko/prettier-config": "workspace:*",
+    "@matejlauko/typings": "workspace:*",
+    "@types/jest": "^28.1.7",
+    "@types/node": "^18.7.6",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^8.22.0",
+    "jest": "^28.1.3",
+    "prettier": "^2.7.1",
+    "tsup": "^6.2.2",
+    "turbo": "^1.4.3",
+    "typescript": "^4.7.4"
+  },
+  "prettier": "@matejlauko/prettier-config",
+  "engines": {
+    "node": ">=14",
+    "pnpm": ">=7"
+  }
+}

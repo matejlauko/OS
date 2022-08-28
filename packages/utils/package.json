@@ -1,0 +1,47 @@
+{
+  "name": "@matejlauko/utils",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matejlauko/OS.git",
+    "directory": "packages/utils"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**",
+    "types.d.ts"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --external react",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
+    "lint": "tsc && eslint src/**/*.ts* --fix && prettier --write src/**/*.ts*",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "lodash.merge": "^4.6.2"
+  },
+  "devDependencies": {
+    "@matejlauko/eslint-config": "*",
+    "@matejlauko/jest-presets": "*",
+    "@matejlauko/typings": "*",
+    "@types/lodash.merge": "^4.6.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "jest": {
+    "preset": "@matejlauko/jest-presets/node"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@matejlauko/eslint-config/react"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "@matejlauko/ui-docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "start-storybook -p 6006 --no-open",
+    "build": "build-storybook --docs",
+    "preview-storybook": "serve storybook-static",
+    "clean": "rm -rf storybook-static",
+    "lint": "tsc && eslint stories/**/*.tsx --fix && prettier --write stories/**/*.tsx"
+  },
+  "dependencies": {
+    "@matejlauko/tokens": "*",
+    "@matejlauko/ui": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@matejlauko/eslint-config": "*",
+    "@matejlauko/typings": "*",
+    "@storybook/addon-actions": "^6.4.18",
+    "@storybook/addon-backgrounds": "^6.5.10",
+    "@storybook/addon-docs": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.18",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.4.18",
+    "@storybook/addon-measure": "^6.5.10",
+    "@storybook/addon-outline": "^6.5.10",
+    "@storybook/addons": "^6.5.10",
+    "@storybook/builder-vite": "^0.2.2",
+    "@storybook/client-api": "^6.5.10",
+    "@storybook/client-logger": "^6.5.10",
+    "@storybook/core-common": "^6.5.10",
+    "@storybook/jest": "^0.0.10",
+    "@storybook/node-logger": "^6.5.10",
+    "@storybook/react": "^6.4.18",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/theming": "^6.5.10",
+    "@types/react": "^18.0.17",
+    "@vitejs/plugin-react": "^2.0.1",
+    "eslint": "^8.11.0",
+    "eslint-plugin-storybook": "^0.6.4",
+    "require-from-string": "^2.0.2",
+    "serve": "^14.0.1",
+    "typescript": "^4.5.4",
+    "vite": "^3.0.8",
+    "webpack": "^5.74.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@matejlauko/eslint-config/react",
+      "plugin:storybook/recommended"
+    ]
+  }
+}

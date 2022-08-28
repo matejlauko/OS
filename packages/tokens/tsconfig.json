@@ -1,0 +1,9 @@
+{
+  "extends": "@matejlauko/typings/base.json",
+  "compilerOptions": {
+    "lib": ["dom", "ESNext"],
+    "noEmit": true
+  },
+  "exclude": ["dist", "node_modules"],
+  "include": ["src"]
+}

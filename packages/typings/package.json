@@ -1,0 +1,32 @@
+{
+  "name": "@matejlauko/typings",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matejlauko/OS.git",
+    "directory": "packages/typings"
+  },
+  "main": "index.js",
+  "files": [
+    "base.json",
+    "node.json",
+    "react-library.json",
+    "nextjs.json",
+    "vite.json",
+    "helpers.d.ts"
+  ],
+  "exports": {
+    "./base.json": "./base.json",
+    "./nextjs.json": "./nextjs.json",
+    "./node.json": "./node.json",
+    "./react-library.json": "./react-library.json",
+    "./vite.json": "./vite.json",
+    "./helpers": {
+      "types": "./helpers.d.ts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
