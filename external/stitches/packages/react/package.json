@@ -87,5 +87,8 @@
     "preact",
     "react",
     "tsx"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
