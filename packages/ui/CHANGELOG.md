@@ -1,5 +1,11 @@
 # @matejlauko/ui
 
+## 0.1.3
+
+### Patch Changes
+
+- ebed8e3: Remove export field in package.json
+
 ## 0.1.2
 
 ### Patch Changes
